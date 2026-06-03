@@ -102,8 +102,13 @@ nav a[aria-current="page"] {
 }
 
 .hero-slider img {
+    display: block;
     max-height: 460px;
     object-fit: contain;
+}
+
+.hero-slider img + img {
+    margin-top: 16px;
 }
 
 main {
@@ -183,8 +188,6 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-/* Radio buttons remain inline */
 
 input[type="radio"] {
     width: auto;
