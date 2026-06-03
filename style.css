@@ -1,0 +1,268 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ==========================
+   Accessibility
+   ========================== */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* ==========================
+   Header
+   ========================== */
+
+header {
+    text-align: center;
+    background: #005b96;
+    color: white;
+    padding: 30px 20px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 6px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.tagline {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ==========================
+   Navigation
+   ========================== */
+
+nav {
+    background: #003f6b;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 3px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+    background: #0077cc;
+}
+
+/* ==========================
+   Main Content
+   ========================== */
+
+.hero-slider {
+    max-width: 1000px;
+    margin: 24px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-slider img,
+.contact-card {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #d8e0e7;
+    background: white;
+}
+
+.hero-slider img {
+    max-height: 460px;
+    object-fit: contain;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #005b96;
+}
+
+h3 {
+    color: #003f6b;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+ol,
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 18px;
+}
+
+.contact-card {
+    display: block;
+    max-width: 760px;
+    margin: 24px 0;
+}
+
+.contact-details {
+    border-top: 1px solid #d8e0e7;
+    margin-top: 28px;
+    padding-top: 8px;
+}
+
+a {
+    color: #005b96;
+}
+
+a:hover,
+a:focus {
+    text-decoration-thickness: 2px;
+}
+
+/* ==========================
+   Forms
+   ========================== */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Radio buttons remain inline */
+
+input[type="radio"] {
+    width: auto;
+}
+
+#submit_btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submit_btn:hover,
+#submit_btn:focus {
+    background: #005b96;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+
+footer {
+    background: #003f6b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    header {
+        padding: 24px 16px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    nav {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        margin: 28px auto;
+    }
+}
