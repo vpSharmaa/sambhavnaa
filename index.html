@@ -58,6 +58,54 @@
         work and welcome your questions, suggestions, and feedback.
     </p>
 
+<section aria-labelledby="search-heading">
+    <h2 id="search-heading">Search Disability Resources</h2>
+
+    <label for="searchBox">
+        Search for schemes, institutions, ministries, disability services, etc.
+    </label>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Example: scholarships for blind students"
+        style="width:100%;max-width:500px;padding:8px;"
+    >
+
+    <button id="searchBtn">
+        Search
+    </button>
+</section>
+<script>
+document.getElementById("searchBtn").addEventListener("click", function () {
+
+    const query = document.getElementById("searchBox").value.trim();
+
+    if (!query) {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    const sites = [
+        "disabilityaffairs.gov.in",
+        "socialjustice.gov.in",
+        "rehabcouncil.nic.in",
+        "thenationaltrust.gov.in",
+        "niepvd.nic.in"
+    ];
+
+    const siteQuery = sites
+        .map(site => "site:" + site)
+        .join(" OR ");
+
+    const searchUrl =
+        "https://www.google.com/search?q=" +
+        encodeURIComponent(query + " (" + siteQuery + ")");
+
+    window.open(searchUrl, "_blank");
+});
+</script>
+
     <p>
         Please feel free to contact us at
         <a href="mailto:samdat1412@gmail.com">
