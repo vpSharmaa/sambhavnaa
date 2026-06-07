@@ -32,27 +32,24 @@
 </nav>
 
 <div class="hero-slider">
-<<<<<<< HEAD
     <img src="images/04.jpg" alt="Sambhavnaa Disability Action Trust contact card">
-=======
-    <img src="images/04.png" alt="Sambhavnaa Disability Action Trust contact card">
->>>>>>> 37e92bf0a95e35a094b22c7e66b980ed38df62b8
     <img src="images/image_blanket.jpeg" alt="Sambhavnaa Trust activities">
 </div>
-
 <main id="main-content">
 
-    <h2 id="welcome-msg"></h2>
+<h2 id="welcome-msg"></h2>
 
     <p>
-        <strong>SamDAT</strong> is the abbreviated form of
-        <strong>Sambhavnaa Disability Action Trust</strong>.
-        In day-to-day communication, we are simply known as
-        <strong>Sambhavnaa Trust</strong>.
+        We are committed to promoting accessibility, inclusion,
+        empowerment, and equal participation for persons with disabilities
+        in all spheres of life.
     </p>
-<<<<<<< HEAD
-<section aria-labelledby="search-heading">
-    <h2 id="search-heading">Search Disability Resources</h2>
+
+    <p>
+        Thank you for visiting our website. We value your interest in our
+        work and welcome your questions, suggestions, and feedback.
+    </p>
+</main>
 
 <section aria-labelledby="search-heading">
     <h2 id="search-heading">Search Disability Resources</h2>
@@ -87,8 +84,8 @@ document.getElementById("searchBtn").addEventListener("click", function () {
         "socialjustice.gov.in",
         "rehabcouncil.nic.in",
         "thenationaltrust.gov.in",
-        "niepvd.nic.in"
-        "swavlambancard.gov.in"
+        "niepvd.nic.in",
+        "swavlambancard.gov.in",
         "divyangjanid.indianrail.gov.in"
     ];
 
@@ -98,36 +95,10 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
     const searchUrl =
         "https://www.google.com/search?q=" +
-        encodeURIComponent(query + " (" + siteQuery + ")");
-
+        encodeURIComponent(query + " " + siteQuery);
     window.open(searchUrl, "_blank");
 });
 </script>
-
-    const siteQuery = sites
-        .map(site => "site:" + site)
-        .join(" OR ");
-
-    const searchUrl =
-        "https://www.google.com/search?q=" +
-        encodeURIComponent(query + " (" + siteQuery + ")");
-
-    window.open(searchUrl, "_blank");
-});
-</script>
-=======
->>>>>>> 37e92bf0a95e35a094b22c7e66b980ed38df62b8
-
-    <p>
-        We are committed to promoting accessibility, inclusion,
-        empowerment, and equal participation for persons with disabilities
-        in all spheres of life.
-    </p>
-
-    <p>
-        Thank you for visiting our website. We value your interest in our
-        work and welcome your questions, suggestions, and feedback.
-    </p>
 
     <p>
         Please feel free to contact us at
@@ -136,7 +107,6 @@ document.getElementById("searchBtn").addEventListener("click", function () {
         </a>.
     </p>
 
-</main>
 
 <footer>
     <div class="footer-links">
@@ -162,10 +132,6 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
     document.getElementById("welcome-msg").textContent = message;
 </script>
-
 </body>
-<<<<<<< HEAD
+
 </html>
-=======
-</html>
->>>>>>> 37e92bf0a95e35a094b22c7e66b980ed38df62b8

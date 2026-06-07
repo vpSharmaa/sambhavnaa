@@ -242,7 +242,6 @@ footer a:focus {
 footer p {
     margin: 0;
 }
-
 @media (max-width: 640px) {
     header {
         padding: 24px 16px;
@@ -264,12 +263,4 @@ footer p {
     nav a {
         text-align: center;
     }
-
-    main {
-        margin: 28px auto;
-    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 37e92bf0a95e35a094b22c7e66b980ed38df62b8
