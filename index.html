@@ -46,17 +46,8 @@
         In day-to-day communication, we are simply known as
         <strong>Sambhavnaa Trust</strong>.
     </p>
-
-    <p>
-        We are committed to promoting accessibility, inclusion,
-        empowerment, and equal participation for persons with disabilities
-        in all spheres of life.
-    </p>
-
-    <p>
-        Thank you for visiting our website. We value your interest in our
-        work and welcome your questions, suggestions, and feedback.
-    </p>
+<section aria-labelledby="search-heading">
+    <h2 id="search-heading">Search Disability Resources</h2>
 
 <section aria-labelledby="search-heading">
     <h2 id="search-heading">Search Disability Resources</h2>
@@ -92,6 +83,8 @@ document.getElementById("searchBtn").addEventListener("click", function () {
         "rehabcouncil.nic.in",
         "thenationaltrust.gov.in",
         "niepvd.nic.in"
+        "swavlambancard.gov.in"
+        "divyangjanid.indianrail.gov.in"
     ];
 
     const siteQuery = sites
@@ -105,6 +98,29 @@ document.getElementById("searchBtn").addEventListener("click", function () {
     window.open(searchUrl, "_blank");
 });
 </script>
+
+    const siteQuery = sites
+        .map(site => "site:" + site)
+        .join(" OR ");
+
+    const searchUrl =
+        "https://www.google.com/search?q=" +
+        encodeURIComponent(query + " (" + siteQuery + ")");
+
+    window.open(searchUrl, "_blank");
+});
+</script>
+
+    <p>
+        We are committed to promoting accessibility, inclusion,
+        empowerment, and equal participation for persons with disabilities
+        in all spheres of life.
+    </p>
+
+    <p>
+        Thank you for visiting our website. We value your interest in our
+        work and welcome your questions, suggestions, and feedback.
+    </p>
 
     <p>
         Please feel free to contact us at
