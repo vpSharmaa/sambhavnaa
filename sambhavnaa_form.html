@@ -1,195 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambhavnaa Supporters Registration Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Sambhavnaa Supporters Registration Form</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    margin:20px;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 8px rgba(0,0,0,.2);
+}
+
+h1,h2{
+    text-align:center;
+}
+
+fieldset{
+    margin-bottom:20px;
+    padding:15px;
+}
+
+legend{
+    font-weight:bold;
+    font-size:1.1em;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    font-size:1rem;
+    box-sizing:border-box;
+}
+
+textarea{
+    height:120px;
+}
+
+.checkbox-group label,
+.radio-group label{
+    display:block;
+    font-weight:normal;
+    margin-top:5px;
+}
+
+.checkbox-group input,
+.radio-group input{
+    width:auto;
+    margin-right:8px;
+}
+
+.buttons{
+    text-align:center;
+    margin-top:25px;
+}
+
+button{
+    padding:12px 24px;
+    font-size:1rem;
+    margin:5px;
+    cursor:pointer;
+}
+
+.required{
+    color:red;
+}
+
+.note{
+    font-size:.95rem;
+    color:#444;
+}
+
+</style>
+
 </head>
 
 <body>
-<nav aria-label="Primary navigation">
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="objective.html">Our Objectives</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
 
-<h1>Detailed Information of Sambhavnaa Supporters</h1>
+<div class="container">
+
+<h1>Sambhavnaa Disability Action Trust</h1>
+
+<h2>Supporters Registration Form</h2>
 
 <p>
-Please fill in this form to register as a Sambhavnaa Supporter.
-Your support can help create opportunities and improve the quality
-of life of persons with disabilities.
+Thank you for your interest in supporting Sambhavnaa Disability Action Trust (SamDAT).
+Your information will help us connect with you regarding our activities, programmes and volunteer opportunities.
 </p>
 
-<form action="https://formspree.io/f/xwvjanvd" method="POST">
-    <!-- Personal Details -->
+<form action="https://formspree.io/f/xwvjanvd" method="POST" enctype="multipart/form-data">
 
-    <label for="fullname">Full Name *</label><br>
-    <input type="text" id="fullname" name="fullname" required>
-    <br><br>
+<fieldset>
 
-    <label for="age">Age (in years)</label><br>
-    <input type="number" id="age" name="age" min="1">
-    <br><br>
+<legend>Personal Information</legend>
 
-    <fieldset>
-        <legend>Gender</legend>
+<label for="name">
+Full Name <span class="required">*</span>
+</label>
 
-        <label>
-            <input type="radio" name="gender" value="male">
-            Male
-        </label>
+<input
+type="text"
+id="name"
+name="Full Name"
+required>
 
-        <label>
-            <input type="radio" name="gender" value="female">
-            Female
-        </label>
+<label for="age">
+Age
+</label>
 
-        <label>
-            <input type="radio" name="gender" value="other">
-            Other
-        </label>
-    </fieldset>
+<input
+type="number"
+id="age"
+name="Age"
+min="10"
+max="120">
 
-    <br>
+<label>
+Gender
+</label>
 
-    <label for="phone">WhatsApp Number *</label><br>
-    <input type="tel" id="phone" name="phone" required>
-    <br><br>
+<div class="radio-group">
 
-    <label for="email">Email Address</label><br>
-    <input type="email" id="email" name="email">
-    <br><br>
+<label>
+<input type="radio" name="Gender" value="Male">
+Male
+</label>
 
-    <label for="address">Postal Address</label><br>
-    <textarea id="address" name="address" rows="3"></textarea>
-    <br><br>
+<label>
+<input type="radio" name="Gender" value="Female">
+Female
+</label>
 
-    <label for="city">City</label><br>
-    <input type="text" id="city" name="city">
-    <br><br>
+<label>
+<input type="radio" name="Gender" value="Other">
+Other
+</label>
 
-    <label for="state">State</label><br>
-    <input type="text" id="state" name="state">
-    <br><br>
+<label>
+<input type="radio" name="Gender" value="Prefer not to say">
+Prefer not to say
+</label>
 
-    <label for="occupation">Occupation</label><br>
-    <input type="text" id="occupation" name="occupation">
-    <br><br>
+</div>
 
-    <label for="photo">Upload Your Photograph</label><br>
-    <input type="file" id="photo" name="photo" accept="image/*">
-    <br><br>
+<label for="occupation">
+Occupation
+</label>
 
-    <!-- Type of Support -->
+<input
+type="text"
+id="occupation"
+name="Occupation">
 
-    <fieldset>
-        <legend>How would you like to support Sambhavnaa?</legend>
+<label for="photo">
+Photograph (Optional)
+</label>
 
-        <label>
-            <input type="checkbox" name="support[]" value="volunteer">
-            Volunteer
-        </label>
-        <br>
+<input
+type="file"
+id="photo"
+name="Photograph"
+accept=".jpg,.jpeg,.png">
 
-        <label>
-            <input type="checkbox" name="support[]" value="administrative">
-            Administrative Support
-        </label>
-        <br>
+</fieldset>
 
-        <label>
-            <input type="checkbox" name="support[]" value="financial">
-            Financial Support
-        </label>
-        <br>
+<fieldset>
 
-        <label>
-            <input type="checkbox" name="support[]" value="awareness">
-            Awareness and Advocacy
-        </label>
-        <br>
+<legend>Contact Details</legend>
 
-        <label>
-            <input type="checkbox" name="support[]" value="fundraising">
-            Fund Raising
-        </label>
-        <br>
+<label for="mobile">
+Mobile / WhatsApp Number
+<span class="required">*</span>
+</label>
 
-        <label>
-            <input type="checkbox" name="support[]" value="professional">
-            Professional Services
-        </label>
+<input
+type="tel"
+id="mobile"
+name="Mobile"
+required>
 
-    </fieldset>
+<label for="email">
+Email Address
+<span class="required">*</span>
+</label>
 
-    <br>
+<input
+type="email"
+id="email"
+name="Email"
+required>
 
-    <label for="availability">
-        How much time can you devote to voluntary activities?
-    </label><br>
+<label for="address">
+Address
+</label>
 
-    <select id="availability" name="availability">
-        <option value="">Select</option>
-        <option value="occasionally">Occasionally</option>
-        <option value="weekly">A few hours every week</option>
-        <option value="monthly">A few hours every month</option>
-        <option value="regular">Regularly</option>
-    </select>
+<textarea
+id="address"
+name="Address"></textarea>
 
-    <br><br>
+<label for="city">
+City
+</label>
 
-    <label for="contact">
-        Preferred Mode of Communication
-    </label><br>
+<input
+type="text"
+id="city"
+name="City">
 
-    <select id="contact" name="contact">
-        <option value="">Select</option>
-        <option value="whatsapp">WhatsApp</option>
-        <option value="email">Email</option>
-        <option value="phone">Phone Call</option>
-    </select>
+<label for="state">
+State
+</label>
 
-    <br><br>
+<input
+type="text"
+id="state"
+name="State">
 
-    <label for="interest">
-        Areas of Interest
-    </label><br>
+<label for="country">
+Country
+</label>
 
-    <textarea
-        id="interest"
-        name="interest"
-        rows="4"
-        placeholder="Education, accessibility, assistive technology, advocacy, employment, etc.">
-    </textarea>
+<input
+type="text"
+id="country"
+name="Country"
+value="India">
 
-    <br><br>
+</fieldset>
 
-    <label for="message">
-        Why would you like to support Sambhavnaa?
-    </label><br>
+<fieldset>
 
-    <textarea
-        id="message"
-        name="message"
-        rows="5"
-        placeholder="Write a few lines about your interest and motivation.">
-    </textarea>
+<legend>How would you like to support Sambhavnaa?</legend>
 
-    <br><br>
+<div class="checkbox-group">
 
-    <button type="submit">
-        Submit Registration
-    </button>
+<label>
+<input type="checkbox" name="Support[]" value="Volunteer">
+Volunteer
+</label>
 
-    <button type="reset">
-        Clear Form
-    </button>
+<label>
+<input type="checkbox" name="Support[]" value="Professional Services">
+Professional Services
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Fund Raising">
+Fund Raising
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Awareness Campaigns">
+Awareness Campaigns
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Training Programmes">
+Training Programmes
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Employment Support">
+Employment Support
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Technical Assistance">
+Technical Assistance
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Donate">
+Donate
+</label>
+
+<label>
+<input type="checkbox" name="Support[]" value="Other">
+Other
+</label>
+
+</div>
+
+<label for="availability">
+Availability
+</label>
+
+<select
+id="availability"
+name="Availability">
+
+<option value="">Select</option>
+<option>Weekdays</option>
+<option>Weekends</option>
+<option>Evenings</option>
+<option>Occasionally</option>
+<option>As Needed</option>
+
+</select>
+
+<label for="contactmode">
+Preferred Mode of Contact
+</label>
+
+<select
+id="contactmode"
+name="Preferred Contact">
+
+<option>Email</option>
+<option>Phone Call</option>
+<option>WhatsApp</option>
+<option>SMS</option>
+
+</select>
+
+<label for="interest">
+Areas of Interest / Skills
+</label>
+
+<textarea
+id="interest"
+name="Areas of Interest"></textarea>
+
+<label for="message">
+Any Additional Message
+</label>
+
+<textarea
+id="message"
+name="Message"></textarea>
+
+</fieldset>
+
+<p class="note">
+By submitting this form, you agree that the information provided may be used by Sambhavnaa Disability Action Trust solely for communication regarding its activities. Your personal information will not be shared with third parties without your consent, except where required by law.
+</p>
+
+<div class="buttons">
+
+<button type="submit">
+Submit Registration
+</button>
+
+<button type="reset">
+Reset Form
+</button>
+
+</div>
 
 </form>
+
+</div>
 
 </body>
 </html>
